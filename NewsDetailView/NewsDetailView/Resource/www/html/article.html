@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="../css/article.css">
+        <script type="text/javascript" src="../js/article.js"></script>
+        <script>
+            function replaceImgDecodeData(data,data2,imageW,imageH)
+            {
+                var x = document.getElementsByClassName(data);
+                for (var i = 0; i < x.length; i++) {
+                    x[i].src = data2;
+                    x[i].width = imageW;
+                    x[i].height = imageH;
+                    x[i].onload = function (){
+                        resizewebview();
+                    };
+                }
+            }
+        </script>
+        <script>
+            function imgclick(imgid)
+            {
+                var img = document.getElementById(imgid);
+                ocimgclick (imgid,img.offsetTop,img.scrollHeight/img.scrollWidth);
+            }
+        </script>
+    </head>
+    
+    <body id="container" style='margin:0;padding:0'>
+        <p>mainnews</p>
+    </body>
+    
+</html>
